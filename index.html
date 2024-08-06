@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulf Travel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #004d66;
+    color: white;
+    padding: 1em 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav a {
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.nav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav a {
+        display: none;
+    }
+    .nav a.icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav.responsive {
+        position: relative;
+    }
+    .nav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/logo.jfif" alt="Logo" class="logo-img">
+                <h1>Gulf Travel Booking</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about_us.html" class="icon" onclick="myFunction()">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Explore the Gulf with Ease</h2>
+                <p>Book your travel tickets to various cities and countries in the Gulf region.</p>
+                <form id="search-form">
+                    <input type="text" id="origin" placeholder="Origin">
+                    <input type="text" id="destination" placeholder="Destination">
+                    <input type="date" id="departure-date" placeholder="Departure Date">
+                    <input type="number" id="passengers" placeholder="Passengers">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="deals">
+            <h3>Special Deals</h3>
+            <div class="deal-cards">
+                <div class="card">
+                    <img src="img/deal1.jpg" alt="Deal 1">
+                    <h4>Dubai Getaway</h4>
+                    <p>Starting from $200</p>
+                </div>
+                <div class="card">
+                    <img src="img/deal2.jpg" alt="Deal 2">
+                    <h4>Riyadh Adventure</h4>
+                    <p>Starting from $150</p>
+                </div>
+                <div class="card">
+                    <img src="img/travel1.jpg" alt="Deal 3">
+                    <h4>Oman Experience</h4>
+                    <p>Starting from $180</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gulf Travel Booking. All Rights Reserved.</p>
+    </footer>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
+</script>
+    <script src="script.js"></script>
+
+</body>
+</html>
